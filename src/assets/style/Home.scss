@@ -1,0 +1,121 @@
+$main: #f0d8bb;
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $main;
+  &:before {
+    animation: grain 8s steps(10) infinite;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png");
+    content: "";
+    height: 300%;
+    left: -50%;
+    opacity: 0.5;
+    position: fixed;
+    top: -100%;
+    width: 300%;
+    // z-index: -1;
+  }
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+}
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
+
+.landing {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  .landing-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Blackbird";
+    font-weight: 500 !important;
+    .left {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #e3f6fe;
+      border-right: 0.5px solid #a7a7a7;
+      h1 {
+        margin: 4.5rem 0 !important;
+        padding: 0;
+        font-size: 8.5rem;
+        text-align: center;
+        width: 60%;
+        font-family: "Bigilla";
+      }
+      h3 {
+        padding: 0;
+        font-size: 1.5rem;
+        text-align: center;
+        width: 80%;
+        font-weight: 500 !important;
+      }
+    }
+
+    .right {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-right: 0.5px solid #a7a7a7;
+      h2 {
+        margin: 2rem 0 !important;
+        padding: 0;
+        font-size: 3rem;
+        text-align: center;
+        width: 80%;
+        font-weight: 500 !important;
+      }
+      h4 {
+        padding: 0;
+        font-size: 1.5rem;
+        text-align: center;
+        width: 80%;
+        font-weight: 500 !important;
+      }
+    }
+  }
+}

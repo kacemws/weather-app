@@ -2,16 +2,24 @@
   display: block;
 }
 @font-face {
+  font-family: "Blackbird";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Blackbird"),
+    url("./assets/fonts/Blackbird.otf") format("opentype");
+}
+@font-face {
   font-family: "Bigilla";
   font-style: normal;
   font-weight: 500;
-  src: local("Bigilla"), url("./assets/fonts/Bigilla.otf") format("otf");
+  src: local("Bigilla"), url("./assets/fonts/Bigilla.otf") format("opentype");
 }
 @font-face {
   font-family: "Bigilla";
   font-style: normal;
   font-weight: bold;
-  src: local("Bigilla"), url("./assets/fonts/Bigilla-Bold.otf") format("otf");
+  src: local("Bigilla"),
+    url("./assets/fonts/Bigilla-Bold.otf") format("opentype");
 }
 
 * {
